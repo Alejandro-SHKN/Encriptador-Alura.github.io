@@ -1,13 +1,14 @@
 
 
 function encriptar() {
-  document.getElementById("p__sinmensajes_id--encriptador").style.display = "none";
+
     var mensaje = document.getElementById("mensaje");
     var textoEncriptado = "";
   
     // Verifica si el campo de entrada tiene un valor
     var frase = document.getElementById("textoEncriptado").value.trim().toLowerCase();
     if (frase !== "") {
+        document.getElementById("p__sinmensajes_id--encriptador").style.display = "none";
       textoEncriptado = frase.replace(/e/img, "enter")
         .replace(/o/img, "ober")
         .replace(/i/img, "imes")
