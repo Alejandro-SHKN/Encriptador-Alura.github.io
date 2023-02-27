@@ -1,0 +1,16 @@
+html{
+    /* width: -moz-fit-content;
+    width: fit-content; */
+
+}
+.sobreHeader {
+    /* height: 96px; */
+    /* width: 100%; */
+    margin-top: 24px;
+    margin-left: 16px;
+    margin-bottom: 21px;
+}
+
+body{
+    background-color: #fbfeff;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="sobreHeader.css">
+    <link rel="stylesheet" href="sobreEncriptador.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="javascript.js"></script>
+    <title>Cifrado</title>
+</head>
+<header>
+    <section class="sobreHeader">
+            <img src="assets/img/Vector.svg" alt="" class="img__vector-header">
+    </section>
+</header>
+
+<body>
+    <main>
+        <section class="sobreEncriptador">
+            <div class="div__inputingresartexto--encriptador"><input type="text" name="" id="textoEncriptado"
+                    class="input__ingresartexto-encriptador" placeholder="Ingrese el texto aqui">
+            </div>
+            <div class="div__textarea-encriptador">
+                <div id="mensaje"></div>
+                <p class="p__ningunmensaje-encriptador" id="p__sinmensajes_id--encriptador">Ningún mensaje fue
+                    encontrado
+                </p>
+                <textarea name="" cols="30" rows="5" class="textarea__resultado-encriptado" id="textoDesencriptado"
+                    placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
+            </div>
+            <div class="div__p-imagen--encriptador">
+                <p class="p__condicion-encriptador"><span><img src="assets/img/alerta.svg" alt=""
+                            class="img_svgalerta-encriptador"></span>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="div__containerbotones-encriptador">
+                <button class="button__encriptar-encriptador" id="botonEncriptado">Encriptar</button>
+                <button class="button__desencriptar-encriptador" id="botonDesencriptado">Desencriptar</button>
+            </div>
+            <div class="div__botoncopiarcontainer-encriptador"><button class="button__copiar-encriptador"
+                    id="botonCopiar">Copiar</button></div>
+        </section>
+    </main>
+</body>
+<script>
+    var btn = document.querySelector("#botonEncriptado")
+    btn.onclick = encriptar;
+    var btn2 = document.querySelector("#botonDesencriptado")
+    btn2.onclick = desencriptar;
+    var btn3 = document.querySelector("#botonCopiar")
+    btn3.onclick = copiar;
+
+</script>
+
+</html>
