@@ -83,6 +83,10 @@ function encriptar() {
   let parrafoModoColor = document.getElementById(`ID-p__modoColor`);
   let imgCambiarFondo = document.getElementById('ID-img__cambiarColor');
   let parrafoAlerta = document.getElementById(`ID-p__condicion-encriptador`);
+  // Declaracion de los botones
+  let botonEncriptar = document.getElementById(`botonEncriptado`);
+  let botonDesencriptar = document.getElementById(`botonDesencriptado`)
+  let botonCopiar = document.getElementById(`botonCopiar`)
   
   imgCambiarFondo.addEventListener('click', function () {
     if (parrafoModoColor.textContent == `Tema Claro`) {
@@ -91,7 +95,9 @@ function encriptar() {
       parrafoModoColor.style.color = `white`
       parrafoModoColor.style.marginRight = `20px`
       imgCambiarFondo.style.opacity = 0;
+      botonCopiar.style.borderColor = `white`
       setTimeout(() => {
+        parrafoModoColor.style.opacity = 1;
         parrafoAlerta.style.color = `white`
         parrafoModoColor.style.marginRight = `0px`
         parrafoModoColor.textContent = `Tema Oscuro`;
@@ -99,14 +105,25 @@ function encriptar() {
         imgCambiarFondo.src = `https://i.postimg.cc/3xYpqm5P/crescent-moon.png`
         imgCambiarFondo.style.opacity = 1;
         imgCambiarFondo.style.backgroundColor =`rgb(69 82 84)`;
+        botonEncriptar.style.borderColor = `white`
+        botonDesencriptar.style.borderColor = `rgb(25, 113, 255)`
+        // botonDesencriptar.style.backgroundColor = `#99d9f9`
+        botonDesencriptar.style.color = `#0A3991`
+        botonCopiar.style.borderColor = `rgb(25, 113, 255)`
       }, 500);
+      setTimeout(() => {
+        parrafoModoColor.style.opacity = 0;
+      }, 1400);
       
     } else {
       imgCambiarFondo.style.opacity = 0; 
       parrafoModoColor.style.marginLeft = `20px`
       colorFondo.style.backgroundColor = 'rgb(251, 254, 255)';
       parrafoModoColor.style.color = `black`
+      botonCopiar.style.borderColor = `#0A3871`
+      botonDesencriptar.style.borderColor = `#0A3871`
       setTimeout(() => {
+        parrafoModoColor.style.opacity = 1;
         parrafoAlerta.style.color = `black`
         parrafoModoColor.style.marginLeft = `0px`
         parrafoModoColor.textContent = `Tema Claro`;
@@ -114,7 +131,13 @@ function encriptar() {
         imgCambiarFondo.src = `https://i.postimg.cc/hPfp542g/sun-1.png`
         imgCambiarFondo.style.opacity = 1;
         imgCambiarFondo.style.backgroundColor =`rgb(255, 236, 116)`;
+        botonEncriptar.style.borderColor = `#0A3871`
+        botonDesencriptar.style.backgroundColor = `white`
       }, 500);
+      setTimeout(() => {
+      parrafoModoColor.style.opacity = 0;
+        
+      }, 1400);
     }
   });
   

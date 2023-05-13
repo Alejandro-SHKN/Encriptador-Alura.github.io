@@ -1,8 +1,4 @@
-html{
-    /* width: -moz-fit-content;
-    width: fit-content; */
 
-}
 .sobreHeader {
     /* height: 96px; */
     /* width: 100%; */
@@ -30,14 +26,18 @@ html{
     border-radius: 20px;
     margin-right: 12px;
     position: relative;
+    right: 0 px;
 }
 .img__cambiarColor{
     transition: all 800ms ease-in-out;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     padding: 5px 30px 5px 30px;
     background-color: rgb(255, 236, 116);
     border-radius: 20px;
+    cursor: pointer;
+    /* position: relative;
+    right: -30px; */
 }
 .img__cambiarColor:active{
     transform: scale(0.5);
@@ -57,4 +57,5 @@ html{
     color: black;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    opacity: 0;
 }
