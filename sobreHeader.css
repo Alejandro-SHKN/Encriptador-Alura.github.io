@@ -10,7 +10,51 @@ html{
     margin-left: 16px;
     margin-bottom: 21px;
 }
+.img__vector-headerBlanco{
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    left: 16px;
+    z-index: 3;
+}
+.div__containerElementosHeader{
+    display: flex;
+    justify-content: space-between;
+}
 
-body{
-    background-color: #fbfeff;
+.div__containerImgCambiarColor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 144px;
+    border-radius: 20px;
+    margin-right: 12px;
+    position: relative;
+}
+.img__cambiarColor{
+    transition: all 800ms ease-in-out;
+    width: 40px;
+    height: 40px;
+    padding: 5px 30px 5px 30px;
+    background-color: rgb(255, 236, 116);
+    border-radius: 20px;
+}
+.img__cambiarColor:active{
+    transform: scale(0.5);
+}
+.colorFondoBody{
+    transition: all 1s ease-in-out;
+    /* background-color: #4b4b4b; */
+    background-color: rgb(251, 254, 255);
+    /* background-color: ; */
+
+}
+.p__modoColor{
+    transition: all 1s ease-in-out;
+    position: absolute;
+    top: 6px;
+    font-family: sans-serif;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }

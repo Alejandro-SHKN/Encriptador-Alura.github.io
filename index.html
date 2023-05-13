@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="sobreHeader.css">
@@ -18,31 +18,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="javascript.js"></script>
     <title>Cifrado</title>
 </head>
-<header>
-    <section class="sobreHeader">
+<header class="colorFondoHeader">
+    <div class="div__containerElementosHeader">
+        <section class="sobreHeader">
             <img src="./assets/img/Vector.svg" alt="" class="img__vector-header">
-    </section>
+            <img src="./assets/img/vectorBlanco.svg" alt="" class="img__vector-headerBlanco" id="ID-img__vector-headerBlanco">
+        </section>
+        <div class="div__containerImgCambiarColor" id="ID-div__containerImgCambiarColor">
+            <p class="p__modoColor" id="ID-p__modoColor">Tema Claro</p>
+            <img src="https://i.postimg.cc/hPfp542g/sun-1.png" alt="" class="img__cambiarColor" id="ID-img__cambiarColor">
+        </div>
+    </div>
 </header>
 
-<body>
+<body class="colorFondoBody" id="ID-colorFondoBody">
     <main>
         <section class="sobreEncriptador">
             <div class="div__inputingresartexto--encriptador"><input type="text" name="" id="textoEncriptado"
                     class="input__ingresartexto-encriptador" placeholder="Ingrese el texto aqui">
             </div>
-            <div class="div__textarea-encriptador">
-                <div id="mensaje"></div>
-                <p class="p__ningunmensaje-encriptador" id="p__sinmensajes_id--encriptador">Ningún mensaje fue
-                    encontrado
-                </p>
-                <textarea name="" cols="30" rows="5" class="textarea__resultado-encriptado" id="textoDesencriptado"
-                    placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
+            <div class="div__containerDivTextarea-Encriptador">
+                <div class="div__textarea-encriptador">
+                    <div id="mensaje"></div>
+                    <p class="p__ningunmensaje-encriptador" id="p__sinmensajes_id--encriptador">Ningún mensaje fue
+                        encontrado
+                    </p>
+                    <textarea name="" cols="30" rows="5" class="textarea__resultado-encriptado" id="textoDesencriptado"
+                        placeholder="El texto desencriptado se mostrará aquí" readonly></textarea>
+                </div>
             </div>
             <div class="div__p-imagen--encriptador">
-                <p class="p__condicion-encriptador"><span><img src="./assets/img/alerta.svg" alt=""
+                <p class="p__condicion-encriptador" id="ID-p__condicion-encriptador"><span><img src="./assets/img/alerta.svg" alt=""
                             class="img_svgalerta-encriptador"></span>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="div__containerbotones-encriptador">
@@ -53,6 +61,7 @@
                     id="botonCopiar">Copiar</button></div>
         </section>
     </main>
+    <script type="text/javascript" src="javascript.js"></script>
 </body>
 <script>
     var btn = document.querySelector("#botonEncriptado")

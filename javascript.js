@@ -77,3 +77,44 @@ function encriptar() {
     }
   }
   
+  let colorFondo = document.querySelector('.colorFondoBody');
+  let logoAluraBlanco = document.getElementById(`ID-img__vector-headerBlanco`);
+  let divImgCambiarFondo = document.getElementById('ID-div__containerImgCambiarColor');
+  let parrafoModoColor = document.getElementById(`ID-p__modoColor`);
+  let imgCambiarFondo = document.getElementById('ID-img__cambiarColor');
+  let parrafoAlerta = document.getElementById(`ID-p__condicion-encriptador`);
+  
+  imgCambiarFondo.addEventListener('click', function () {
+    if (parrafoModoColor.textContent == `Tema Claro`) {
+      parrafoModoColor.style.zIndex = `-1`
+      colorFondo.style.backgroundColor = 'rgb(67, 67, 67)';
+      parrafoModoColor.style.color = `white`
+      parrafoModoColor.style.marginRight = `20px`
+      imgCambiarFondo.style.opacity = 0;
+      setTimeout(() => {
+        parrafoAlerta.style.color = `white`
+        parrafoModoColor.style.marginRight = `0px`
+        parrafoModoColor.textContent = `Tema Oscuro`;
+        logoAluraBlanco.style.opacity = 2;
+        imgCambiarFondo.src = `https://i.postimg.cc/3xYpqm5P/crescent-moon.png`
+        imgCambiarFondo.style.opacity = 1;
+        imgCambiarFondo.style.backgroundColor =`rgb(69 82 84)`;
+      }, 500);
+      
+    } else {
+      imgCambiarFondo.style.opacity = 0; 
+      parrafoModoColor.style.marginLeft = `20px`
+      colorFondo.style.backgroundColor = 'rgb(251, 254, 255)';
+      parrafoModoColor.style.color = `black`
+      setTimeout(() => {
+        parrafoAlerta.style.color = `black`
+        parrafoModoColor.style.marginLeft = `0px`
+        parrafoModoColor.textContent = `Tema Claro`;
+        logoAluraBlanco.style.opacity = 0;
+        imgCambiarFondo.src = `https://i.postimg.cc/hPfp542g/sun-1.png`
+        imgCambiarFondo.style.opacity = 1;
+        imgCambiarFondo.style.backgroundColor =`rgb(255, 236, 116)`;
+      }, 500);
+    }
+  });
+  

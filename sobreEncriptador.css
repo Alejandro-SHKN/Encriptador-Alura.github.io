@@ -1,11 +1,19 @@
 .sobreEncriptador {
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
 /* .divcontainer__input-resultado--encriptador {
     display: flex;
 } */
+
+.div__containerDivTextarea-Encriptador{
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
 .div__inputingresartexto--encriptador {
     display: flex;
     flex-wrap: wrap;
@@ -36,11 +44,11 @@
 
 .div__textarea-encriptador {
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(220, 220, 220);
     border-radius: 32px;
     display: flex;
     justify-content: center;
-    /* width: 327px; */
+    width: 90%;
     height: 290px;
     flex-wrap: wrap;
     margin-top: 30px;
@@ -62,21 +70,25 @@
 }
 
 .textarea__resultado-encriptado {
-    width: 100%;
+    width: 99%;
     position: absolute;
     font-family: 'Inter', sans-serif;
     text-align: center;
     display: flex;
     bottom: 0;
-    border-radius: 12px 12px 42px 42px;
+    border-radius: 1px 1px 33px 32px;
     font-size: 29px;
     resize: none;
     color: #0A3871;
     border: none;
+    background-color: rgba(255, 255, 255, 0.378);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .textarea__resultado-encriptado::placeholder {
     font-size: 22px;
+    color: #0A3871;
 }
 
 .textarea__resultado-encriptado {
@@ -108,10 +120,14 @@
     border-radius: 20px;
     padding: 5px 10px;
 }
+.img_svgalerta-encriptador{
+    margin-right: 5px;
+}
 
 .p__condicion-encriptador {
+    transition: all 1s ease-in-out;
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .div__containerbotones-encriptador {
@@ -129,6 +145,13 @@
     padding: 24px;
     background-color: #0A3871;
     color: white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button__desencriptar-encriptador {
@@ -138,8 +161,14 @@
     top: 0px;
     border-radius: 24px;
     padding: 24px;
-    background-color: white;
     color: #0A3871;
+    border-color: #0A3871;
+    border: solid;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
 }
 
 .div__botoncopiarcontainer-encriptador {
@@ -156,5 +185,13 @@
     border-radius: 24px;
     padding: 24px;
     background-color: white;
+    border: solid;
+    font-size: 1.4rem;
     color: #0A3871;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
 }
