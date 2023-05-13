@@ -93,13 +93,13 @@ function encriptar() {
       parrafoModoColor.style.zIndex = `-1`
       colorFondo.style.backgroundColor = 'rgb(67, 67, 67)';
       parrafoModoColor.style.color = `white`
-      parrafoModoColor.style.marginRight = `20px`
+      parrafoModoColor.style.marginRight = `30px`
       imgCambiarFondo.style.opacity = 0;
       botonCopiar.style.borderColor = `white`
       setTimeout(() => {
         parrafoModoColor.style.opacity = 1;
         parrafoAlerta.style.color = `white`
-        parrafoModoColor.style.marginRight = `0px`
+        parrafoModoColor.style.marginRight = `3px`
         parrafoModoColor.textContent = `Tema Oscuro`;
         logoAluraBlanco.style.opacity = 2;
         imgCambiarFondo.src = `https://i.postimg.cc/3xYpqm5P/crescent-moon.png`
@@ -117,12 +117,12 @@ function encriptar() {
       
     } else {
       imgCambiarFondo.style.opacity = 0; 
-      parrafoModoColor.style.marginLeft = `20px`
       colorFondo.style.backgroundColor = 'rgb(251, 254, 255)';
       parrafoModoColor.style.color = `black`
       botonCopiar.style.borderColor = `#0A3871`
       botonDesencriptar.style.borderColor = `#0A3871`
       setTimeout(() => {
+        parrafoModoColor.style.marginRight = `20px`
         parrafoModoColor.style.opacity = 1;
         parrafoAlerta.style.color = `black`
         parrafoModoColor.style.marginLeft = `0px`
