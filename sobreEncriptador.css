@@ -15,15 +15,16 @@
     width: 100%
 }
 .div__inputingresartexto--encriptador {
+    align-items: center;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
 .input__ingresartexto-encriptador {
     height: 48px;
-    width: 343px;
-    margin: 0 auto;
+    width: 323px;
+    margin-left: 10px;
+    margin-right: 10px;
     top: 152px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
@@ -33,7 +34,7 @@
     text-align: center;
     border-radius: 20px;
     border-color: rgb(0, 157, 255);
-    border-style: groove;
+    border-style: groove; 
 
 }
 
@@ -42,9 +43,21 @@
 
 }
 
+.img__borrar{
+    transition: all 1s ease-in-out;
+    width: 40px;
+    height: 40px;
+    /* background-color: #f8f8f8; */
+    background-color: #d0d0d0;
+    padding: 5px;
+    border-radius: 21px;
+    margin-right: 4px;
+}
+
 .div__textarea-encriptador {
     position: relative;
     background-color: rgb(220, 220, 220);
+    /* background-color: rgb(58, 147, 255); */
     border-radius: 32px;
     display: flex;
     justify-content: center;
@@ -57,6 +70,7 @@
 
 
 .p__ningunmensaje-encriptador {
+    transition: all 1s ease-in-out ;
     padding-top: 32px;
     padding-bottom: 15px;
     width: 263px;

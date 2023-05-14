@@ -1,79 +1,77 @@
 
 
 function encriptar() {
-
+    var mensajeAlerta = document.getElementById(`p__sinmensajes_id--encriptador`);
     var mensaje = document.getElementById("mensaje");
-    var textoEncriptado = "";
-  
+    // var textoEncriptado = "aña";
+    
     // Verifica si el campo de entrada tiene un valor
     var frase = document.getElementById("textoEncriptado").value.trim().toLowerCase();
     if (frase !== "") {
-        document.getElementById("p__sinmensajes_id--encriptador").style.display = "none";
+      // document.getElementById("p__sinmensajes_id--encriptador").style.display = "none";
       textoEncriptado = frase.replace(/e/img, "enter")
-        .replace(/o/img, "ober")
-        .replace(/i/img, "imes")
-        .replace(/a/img, "ai")
+      .replace(/o/img, "ober")
+      .replace(/i/img, "imes")
+      .replace(/a/img, "ai")
         .replace(/u/img, "ufat");
-  
+        
       document.getElementById("textoDesencriptado").value = textoEncriptado;
   
       // Muestra el mensaje
-      mensaje.innerHTML = "Se ha encriptado el texto!";
-      mensaje.style.display = "block";
-  
-      // Oculta el mensaje después de 3 segundos
-      setTimeout(function() {
-        mensaje.style.display = "none";
-      }, 5000);
+      // mensaje.innerHTML = "Se ha encriptado el texto!";
+      // mensaje.style.display = "block";
+      mensajeAlerta.style.color = `rgb(160, 2, 2)`
+      mensajeAlerta.textContent = `¡Mensaje encriptado!`;
+      
+      
+      
     }
   }
   
-
+  
   function desencriptar() {
+    var mensajeAlerta = document.getElementById(`p__sinmensajes_id--encriptador`);
     var mensaje = document.getElementById("mensaje");
     var textoDesencriptado = "";
-  
+    
     // Verifica si el campo de entrada tiene un valor
     var frase = document.getElementById("textoDesencriptado").value.trim().toLowerCase();
     if (frase !== "") {
       textoDesencriptado = frase.replace(/enter/img, "e")
-        .replace(/ober/img, "o")
-        .replace(/imes/img, "i")
-        .replace(/ai/img, "a")
-        .replace(/ufat/img, "u");
-  
-        document.getElementById("textoDesencriptado").value = textoDesencriptado;
-
-
-  
+      .replace(/ober/img, "o")
+      .replace(/imes/img, "i")
+      .replace(/ai/img, "a")
+      .replace(/ufat/img, "u");
+      
+      document.getElementById("textoDesencriptado").value = textoDesencriptado;
+      
+      
+      
       // Muestra el mensaje
-      mensaje.innerHTML = "Texto Desencriptado!";
-      mensaje.style.display = "block";
-  
+      mensajeAlerta.style.color = `#0A3871`
+      mensajeAlerta.textContent = `¡Mensaje desencriptado!`;
+      // mensaje.innerHTML = "Texto Desencriptado!";
+      // mensaje.style.display = "block";
+      
       // Oculta el mensaje después de 3 segundos
       setTimeout(function() {
         mensaje.style.display = "none";
       }, 5000);
     }
   }
+  let inputValue = document.getElementById(`textoEncriptado`);
   
   function copiar() {
+    var mensajeAlerta = document.getElementById(`p__sinmensajes_id--encriptador`);
     var mensaje = document.getElementById("mensaje");
     var contenido = document.querySelector("#textoDesencriptado");
     contenido.select();
-  
+    
     // Corta el contenido del textarea y copia al portapapeles
     navigator.clipboard.writeText(contenido.value);
-  
-    // Muestra el mensaje si hay texto en el textarea
-    if (contenido.value.trim() !== "") {
-      mensaje.innerHTML = "Se ha copiado el texto!";
-      mensaje.style.display = "block";
-  
-      // Oculta el mensaje después de 3 segundos
-      setTimeout(function() {
-        mensaje.style.display = "none";
-      }, 5000);
+    if(contenido.value !== ``){ 
+    mensajeAlerta.style.color = `rgb(58, 147, 255)`
+    mensajeAlerta.textContent = `¡Mensaje copiado!`;
     }
   }
   
@@ -87,6 +85,8 @@ function encriptar() {
   let botonEncriptar = document.getElementById(`botonEncriptado`);
   let botonDesencriptar = document.getElementById(`botonDesencriptado`)
   let botonCopiar = document.getElementById(`botonCopiar`)
+  //Declaracion de la imagen para borrar el input 
+  let imgBorrar = document.getElementById(`ID-img__borrar`);
   
   imgCambiarFondo.addEventListener('click', function () {
     if (parrafoModoColor.textContent == `Tema Claro`) {
@@ -97,6 +97,7 @@ function encriptar() {
       imgCambiarFondo.style.opacity = 0;
       botonCopiar.style.borderColor = `white`
       setTimeout(() => {
+        imgBorrar.style.backgroundColor = `white`
         parrafoModoColor.style.opacity = 1;
         parrafoAlerta.style.color = `white`
         parrafoModoColor.style.marginRight = `3px`
@@ -122,6 +123,7 @@ function encriptar() {
       botonCopiar.style.borderColor = `#0A3871`
       botonDesencriptar.style.borderColor = `#0A3871`
       setTimeout(() => {
+        imgBorrar.style.backgroundColor = `#d0d0d0`
         parrafoModoColor.style.marginRight = `20px`
         parrafoModoColor.style.opacity = 1;
         parrafoAlerta.style.color = `black`
@@ -135,9 +137,19 @@ function encriptar() {
         botonDesencriptar.style.backgroundColor = `white`
       }, 500);
       setTimeout(() => {
-      parrafoModoColor.style.opacity = 0;
+        parrafoModoColor.style.opacity = 0;
         
       }, 1400);
     }
   });
   
+  // Declaracion de el boton y contenido del input  
+  imgBorrar.addEventListener(`click`, function () {
+    let inputValue = document.getElementById(`textoEncriptado`);
+    let mensajeDesencriptador = document.getElementById(`textoDesencriptado`);
+    var mensajeAlerta = document.getElementById(`p__sinmensajes_id--encriptador`);
+    mensajeAlerta.textContent = `Ningun mensaje fué encontrado`
+    mensajeAlerta.style.color = `black`
+    mensajeDesencriptador.value = ``
+    inputValue.value = ``
+  })
