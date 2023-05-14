@@ -84,6 +84,7 @@
 }
 
 .textarea__resultado-encriptado {
+    transition: all 1s ease-in-out;
     width: 99%;
     position: absolute;
     font-family: 'Inter', sans-serif;
@@ -98,6 +99,7 @@
     background-color: rgba(255, 255, 255, 0.378);
     -webkit-user-select: none;
     user-select: none;
+    opacity: 1;
 }
 
 .textarea__resultado-encriptado::placeholder {
